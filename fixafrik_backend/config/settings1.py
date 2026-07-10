@@ -8,6 +8,8 @@ from pathlib import Path
 from datetime import timedelta
 from decouple import config, Csv
 
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config("SECRET_KEY", default="dev-secret-key-a-changer")
