@@ -1,0 +1,54 @@
+.devis-recus-chargement,
+.devis-recus-vide {
+  font-size: 0.85rem;
+  color: var(--encre-douce);
+  margin: 10px 0 0 0;
+}
+
+.devis-recus-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+  border-top: 1px solid var(--ligne-douce);
+  padding-top: 14px;
+}
+
+.devis-recu-carte {
+  background: var(--vert-tint);
+  border-radius: var(--rayon-sm);
+  padding: 12px 14px;
+}
+
+.devis-recu-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.devis-recu-entete strong {
+  font-size: 0.9rem;
+  display: block;
+}
+
+.devis-recu-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--encre-attenue);
+}
+
+.devis-recu-montant {
+  font-family: var(--police-mono);
+  font-weight: 700;
+  color: var(--vert-profond-dark);
+  white-space: nowrap;
+}
+
+.devis-recu-message {
+  font-size: 0.85rem;
+  margin: 0 0 10px 0;
+}

@@ -1,0 +1,101 @@
+.detail-artisan {
+  padding: 48px 24px 72px 24px;
+  max-width: 760px;
+}
+
+.detail-entete {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.detail-avatar {
+  width: 70px;
+  height: 70px;
+  font-size: 1.6rem;
+}
+
+.detail-entete h1 {
+  font-size: 1.5rem;
+  margin-bottom: 2px;
+}
+
+.detail-metier {
+  color: var(--orange-dark);
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.detail-zone {
+  margin: 0 0 8px 0;
+  color: var(--encre-attenue);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-badges {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.detail-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--vert-clair);
+  color: var(--vert-profond-dark);
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.detail-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ambre);
+  font-weight: 700;
+}
+
+.detail-entete > a {
+  margin-left: auto;
+}
+
+.detail-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.detail-photos img {
+  border-radius: var(--rayon-sm);
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.detail-avis-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-avis {
+  border-top: 1px solid var(--ligne);
+  padding-top: 14px;
+}
+
+.detail-avis-entete {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .detail-entete > a {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}

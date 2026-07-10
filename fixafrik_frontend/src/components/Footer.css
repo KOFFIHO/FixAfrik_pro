@@ -1,0 +1,72 @@
+.pied-page {
+  margin-top: 100px;
+  background: var(--degrade-heros);
+  color: var(--blanc);
+}
+
+.pied-grille {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 32px;
+  padding: 56px 24px 32px 24px;
+}
+
+.pied-colonne {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pied-marque p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.88rem;
+  max-width: 32ch;
+  margin-top: 12px;
+}
+
+.pied-colonne h4 {
+  color: var(--blanc);
+  font-family: var(--police-corps);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.pied-colonne a,
+.pied-colonne span {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pied-colonne a:hover {
+  color: var(--orange);
+}
+
+.pied-bas {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 20px 24px;
+}
+
+.pied-bas p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 800px) {
+  .pied-grille {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .pied-grille {
+    grid-template-columns: 1fr;
+  }
+}

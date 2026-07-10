@@ -1,0 +1,287 @@
+/* ---------- HERO (scindé, pleine largeur, petites marges) ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 620px) 1fr;
+  align-items: center;
+  background: var(--vert-tint);
+  min-height: 640px;
+}
+
+.hero-colonne-texte {
+  padding: 56px clamp(24px, 5vw, 64px) 56px clamp(20px, 6vw, 72px);
+}
+
+.hero-colonne-image {
+  align-self: stretch;
+  height: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fdfbf6 0%, var(--vert-tint) 100%);
+  padding: 32px clamp(16px, 3vw, 40px) 32px 0;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--orange-dark);
+  margin-bottom: 18px;
+  font-weight: 700;
+  font-family: var(--police-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-titre {
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  line-height: 1.18;
+  margin-bottom: 22px;
+}
+
+.hero-souligne {
+  color: var(--vert-profond);
+}
+
+.hero-sous-titre {
+  font-size: 1.08rem;
+  max-width: 48ch;
+  margin-bottom: 28px;
+  color: var(--encre-attenue);
+}
+
+.hero-bouton {
+  border-radius: var(--rayon-md);
+  padding: 13px 22px;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 4px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--vert-profond-dark);
+}
+
+.hero-badge svg {
+  color: var(--vert-profond);
+  flex-shrink: 0;
+}
+
+.hero-cta-ligne {
+  display: flex;
+  gap: 12px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+/* ---------- SECTIONS GÉNÉRIQUES ---------- */
+.section-entete {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 44px auto;
+}
+
+.section-eyebrow {
+  color: var(--orange-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.section-entete h2 {
+  font-size: 1.9rem;
+}
+
+/* ---------- MÉTIERS ---------- */
+.section-metiers {
+  padding: 84px 24px 20px 24px;
+}
+
+.metiers-grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.metier-tuile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  border-radius: var(--rayon-md);
+  border: 1px solid var(--ligne-douce);
+  background: var(--blanc);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: left;
+  transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.metier-tuile:hover {
+  box-shadow: var(--ombre-md);
+  transform: translateY(-2px);
+  border-color: var(--vert-profond);
+}
+
+/* ---------- ÉTAPES ---------- */
+.etapes {
+  padding: 84px 24px;
+}
+
+.etapes-grille {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.etapes-ligne {
+  position: absolute;
+  top: 14px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg, var(--ligne) 0 8px, transparent 8px 16px
+  );
+  z-index: 0;
+}
+
+.etape {
+  position: relative;
+  z-index: 1;
+  background: var(--sable);
+  padding-top: 4px;
+}
+
+.etape-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--degrade-orange);
+  color: var(--blanc);
+  font-family: var(--police-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.etape h3 {
+  font-size: 1.15rem;
+}
+
+/* ---------- TÉMOIGNAGES ---------- */
+.section-temoignages {
+  background: var(--vert-tint);
+  padding: 84px 0;
+}
+
+.temoignages-grille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.temoignage-carte {
+  background: var(--blanc);
+}
+
+.temoignage-etoiles {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+.temoignage-carte p {
+  color: var(--encre);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.temoignage-auteur strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.temoignage-auteur span {
+  font-size: 0.8rem;
+  color: var(--encre-douce);
+}
+
+/* ---------- CTA ARTISAN ---------- */
+.artisan-cta {
+  padding: 84px 24px 100px 24px;
+}
+
+.artisan-cta-carte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--degrade-heros);
+  border: none;
+  padding: 48px;
+}
+
+.artisan-cta-carte h2,
+.artisan-cta-carte p {
+  color: var(--blanc);
+}
+
+.artisan-cta-carte p {
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-colonne-image {
+    order: -1;
+    min-height: 260px;
+    padding: 24px;
+  }
+  .hero-colonne-texte {
+    padding: 40px 20px 48px 20px;
+  }
+  .metiers-grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .etapes-grille,
+  .temoignages-grille {
+    grid-template-columns: 1fr;
+  }
+  .etapes-ligne {
+    display: none;
+  }
+  .artisan-cta-carte {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-ligne {
+    flex-direction: column;
+  }
+  .hero-cta-ligne a {
+    width: 100%;
+  }
+}

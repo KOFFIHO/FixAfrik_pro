@@ -1,0 +1,33 @@
+.mes-demandes {
+  padding: 48px 24px 72px 24px;
+  max-width: 760px;
+}
+
+.mes-demandes-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mes-demandes-entete h1 {
+  margin: 0;
+}
+
+.modale-fond {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 27, 25, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.modale {
+  width: 100%;
+  max-width: 420px;
+}

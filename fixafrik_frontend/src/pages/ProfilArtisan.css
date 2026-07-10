@@ -1,0 +1,19 @@
+.profil-artisan {
+  padding: 48px 24px 72px 24px;
+  max-width: 620px;
+}
+
+.profil-artisan-entete {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.profil-artisan-entete h1 {
+  margin: 0;
+}
+
+.profil-artisan textarea {
+  resize: vertical;
+}

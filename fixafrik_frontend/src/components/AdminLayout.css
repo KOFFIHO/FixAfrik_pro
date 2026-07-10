@@ -1,0 +1,84 @@
+.admin-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: calc(100vh - 66px);
+}
+
+.admin-sidebar {
+  background: var(--degrade-heros);
+  color: var(--blanc);
+  padding: 28px 18px;
+  position: sticky;
+  top: 66px;
+  height: calc(100vh - 66px);
+}
+
+.admin-sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px;
+  margin-bottom: 32px;
+}
+
+.admin-sidebar-logo strong {
+  display: block;
+  font-family: var(--police-titre);
+  font-size: 1.05rem;
+}
+
+.admin-sidebar-logo span {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.admin-sidebar-lien {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--rayon-sm);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.admin-sidebar-lien:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--blanc);
+}
+
+.admin-sidebar-lien.actif {
+  background: var(--orange);
+  color: var(--blanc);
+}
+
+.admin-contenu {
+  padding: 40px 40px 80px 40px;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+  .admin-sidebar {
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+  .admin-sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .admin-contenu {
+    padding: 28px 18px 60px 18px;
+  }
+}

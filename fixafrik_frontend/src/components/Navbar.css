@@ -1,0 +1,144 @@
+.navbar {
+  background: rgba(251, 246, 238, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--ligne-douce);
+}
+
+.navbar-interieur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  position: relative;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--police-titre);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--vert-profond);
+}
+
+.navbar-logo-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--degrade-heros);
+  color: var(--blanc);
+}
+
+.navbar-logo span {
+  color: var(--orange);
+}
+
+/* Bouton hamburger : caché sur desktop, affiché seulement sous 860px */
+.navbar-hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rayon-sm);
+  border: 1.5px solid var(--ligne);
+  background: var(--blanc);
+  color: var(--vert-profond-dark);
+  cursor: pointer;
+}
+
+.navbar-liens {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.navbar-liens a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--encre);
+  transition: color 0.15s ease;
+}
+
+.navbar-liens a:hover {
+  color: var(--vert-profond);
+}
+
+.navbar-liens button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar-cta {
+  padding: 10px 20px !important;
+}
+
+.navbar-telephone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: var(--vert-profond-dark);
+  white-space: nowrap;
+}
+
+.navbar-telephone svg {
+  color: var(--orange);
+}
+
+/* ---------- MOBILE : menu hamburger façon lesartisanspros.fr ---------- */
+@media (max-width: 860px) {
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  /* Les liens sont masqués par défaut et deviennent un panneau déroulant
+     en pleine largeur, sous la barre, quand le menu est ouvert. */
+  .navbar-liens {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: var(--blanc);
+    border-bottom: 1px solid var(--ligne-douce);
+    box-shadow: var(--ombre-md);
+    padding: 12px 20px 20px 20px;
+  }
+
+  .navbar-liens-ouvert {
+    display: flex;
+  }
+
+  .navbar-liens a,
+  .navbar-liens button {
+    width: 100%;
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--ligne-douce);
+    justify-content: flex-start;
+  }
+
+  .navbar-liens a:last-of-type {
+    border-bottom: none;
+  }
+
+  .navbar-cta {
+    margin-top: 8px;
+    justify-content: center !important;
+  }
+}

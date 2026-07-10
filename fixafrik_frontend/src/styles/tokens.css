@@ -1,0 +1,359 @@
+/* ==========================================================================
+   FIXAFRIK — TOKENS DE DESIGN (v2 — identité premium)
+   Palette : vert profond (confiance/savoir-faire) + orange (énergie/chaleur)
+   Typo : Fraunces (titres) / Inter (interface) / Space Mono (badges, statuts)
+   ========================================================================== */
+
+:root {
+  /* Couleurs de marque */
+  --vert-950: #0a2e21;
+  --vert-profond: #0e5c3e;
+  --vert-profond-dark: #0a4530;
+  --vert-clair: #dcefe3;
+  --vert-tint: #f2f9f5;
+  --orange: #e8622c;
+  --orange-dark: #c94f20;
+  --orange-tint: #fdeee6;
+  --ambre: #f0a83a;
+
+  /* Neutres */
+  --sable: #fbf6ee;
+  --sable-fonce: #f2ead9;
+  --encre: #1c1b19;
+  --encre-attenue: #5a564e;
+  --encre-douce: #837e73;
+  --blanc: #ffffff;
+  --ligne: #e6ddc9;
+  --ligne-douce: #f0e9d8;
+
+  /* États */
+  --succes: #0e5c3e;
+  --attention: #e8622c;
+  --danger: #c1272d;
+  --info: #2c6ae8;
+
+  /* Dégradés signature */
+  --degrade-heros: linear-gradient(135deg, #0e5c3e 0%, #0a4530 55%, #08331f 100%);
+  --degrade-orange: linear-gradient(135deg, #ef7b3f 0%, #e8622c 100%);
+  --degrade-carte: linear-gradient(180deg, #ffffff 0%, #fdfbf6 100%);
+
+  /* Typo */
+  --police-titre: "Fraunces", Georgia, serif;
+  --police-titre-principale: "Orbitron", "Fraunces", sans-serif;
+  --police-corps: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --police-mono: "Space Mono", "Courier New", monospace;
+
+  /* Rayons et ombres */
+  --rayon-sm: 10px;
+  --rayon-md: 16px;
+  --rayon-lg: 24px;
+  --rayon-xl: 32px;
+  --ombre-sm: 0 1px 3px rgba(28, 27, 25, 0.07);
+  --ombre-md: 0 8px 28px rgba(14, 92, 62, 0.13);
+  --ombre-lg: 0 20px 60px rgba(14, 46, 33, 0.18);
+  --ombre-orange: 0 10px 30px rgba(232, 98, 44, 0.25);
+
+  --largeur-max: 1220px;
+  --largeur-lisible: 720px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--police-corps);
+  color: var(--encre);
+  background: var(--sable);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.12;
+  margin: 0 0 0.5em 0;
+  color: var(--encre);
+  letter-spacing: -0.01em;
+}
+
+/* Les titres principaux (h1, h2) utilisent Orbitron, demandé pour donner
+   une identité de marque forte et reconnaissable à la plateforme. */
+h1, h2 {
+  font-family: var(--police-titre-principale);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+h3, h4 {
+  font-family: var(--police-titre);
+  font-weight: 600;
+}
+
+p {
+  line-height: 1.65;
+  color: var(--encre-attenue);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.conteneur {
+  max-width: var(--largeur-max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.etiquette-mono {
+  font-family: var(--police-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* --- Boutons --- */
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: var(--rayon-md);
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.bouton:active {
+  transform: translateY(1px);
+}
+
+.bouton-primaire {
+  background: var(--degrade-orange);
+  color: var(--blanc);
+  box-shadow: var(--ombre-orange);
+}
+
+.bouton-primaire:hover {
+  box-shadow: 0 14px 34px rgba(232, 98, 44, 0.34);
+  transform: translateY(-1px);
+}
+
+.bouton-secondaire {
+  background: var(--vert-profond);
+  color: var(--blanc);
+}
+
+.bouton-secondaire:hover {
+  background: var(--vert-profond-dark);
+}
+
+.bouton-discret {
+  background: transparent;
+  color: var(--vert-profond);
+  border: 1.5px solid var(--ligne);
+}
+
+.bouton-discret:hover {
+  background: var(--vert-tint);
+  border-color: var(--vert-profond);
+}
+
+.bouton-blanc {
+  background: var(--blanc);
+  color: var(--vert-profond-dark);
+}
+
+.bouton-blanc:hover {
+  background: var(--vert-tint);
+}
+
+.bouton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.bouton-pleine-largeur {
+  width: 100%;
+}
+
+.bouton-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+/* --- Champs de formulaire --- */
+.champ {
+  margin-bottom: 18px;
+}
+
+.champ label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--encre);
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: var(--rayon-sm);
+  border: 1.5px solid var(--ligne);
+  background: var(--blanc);
+  color: var(--encre);
+  transition: border-color 0.15s ease;
+}
+
+.champ input:focus,
+.champ select:focus,
+.champ textarea:focus {
+  border-color: var(--vert-profond);
+}
+
+.champ small {
+  display: block;
+  margin-top: 4px;
+  color: var(--encre-douce);
+  font-size: 0.78rem;
+}
+
+.champ small a {
+  color: var(--vert-profond);
+  font-weight: 600;
+}
+
+.message-erreur {
+  background: #fbeaea;
+  color: var(--danger);
+  border: 1px solid #f0c4c4;
+  padding: 12px 16px;
+  border-radius: var(--rayon-sm);
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.message-succes {
+  background: var(--vert-clair);
+  color: var(--vert-profond-dark);
+  border: 1px solid #b9dcc7;
+  padding: 12px 16px;
+  border-radius: var(--rayon-sm);
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* --- Carte générique --- */
+.carte {
+  background: var(--degrade-carte);
+  border-radius: var(--rayon-lg);
+  border: 1px solid var(--ligne-douce);
+  padding: 26px;
+}
+
+/* --- Pastille de statut --- */
+.pastille {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-family: var(--police-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pastille-en_attente { background: #fdecd8; color: #9a5b0f; }
+.pastille-acceptee { background: #dbe8fb; color: #1f4fa3; }
+.pastille-en_cours { background: #fdecd8; color: var(--orange-dark); }
+.pastille-terminee { background: var(--vert-clair); color: var(--vert-profond-dark); }
+.pastille-annulee { background: #f2e1e1; color: var(--danger); }
+.pastille-valide { background: var(--vert-clair); color: var(--vert-profond-dark); }
+.pastille-rejete { background: #f2e1e1; color: var(--danger); }
+
+/* --- Icône dans un halo circulaire (utilisé partout) --- */
+.icone-halo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--vert-clair);
+  color: var(--vert-profond-dark);
+  flex-shrink: 0;
+}
+
+.icone-halo-orange {
+  background: var(--orange-tint);
+  color: var(--orange-dark);
+}
+
+/* --- Modale générique --- */
+.modale-fond {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 46, 33, 0.55);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 200;
+}
+
+.modale {
+  width: 100%;
+  max-width: 440px;
+  box-shadow: var(--ombre-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .conteneur {
+    padding: 0 16px;
+  }
+}

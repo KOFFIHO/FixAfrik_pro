@@ -1,0 +1,62 @@
+.demande-carte {
+  margin-bottom: 16px;
+}
+
+.demande-carte-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.demande-carte-entete h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.demande-categorie {
+  margin: 2px 0 0 0;
+  color: var(--orange-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.demande-description {
+  font-size: 0.92rem;
+  margin: 0 0 12px 0;
+}
+
+.demande-infos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: 0.82rem;
+  color: var(--encre-attenue);
+  border-top: 1px solid var(--ligne);
+  padding-top: 12px;
+}
+
+.demande-infos span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.demande-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.demande-badge-devis {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--orange-tint);
+  color: var(--orange-dark);
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-weight: 700;
+}
